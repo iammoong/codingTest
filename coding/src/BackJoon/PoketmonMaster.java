@@ -9,15 +9,15 @@ import java.util.StringTokenizer;
 
 public class PoketmonMaster {
 
+	public static Map<String, String> map = new HashMap<>();
+	public static int N, M;
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		int N = Integer.parseInt(st.nextToken()); // 입력할 포켓몬 갯수
-		int M = Integer.parseInt(st.nextToken()); // 내가 찾을 포켓몬
-
-		Map<String, String> map = new HashMap<>();
+		N = Integer.parseInt(st.nextToken()); // 입력할 포켓몬 갯수
+		M = Integer.parseInt(st.nextToken()); // 내가 찾을 포켓몬
 
 		for (int i = 0; i < N; i++) {
 			String poketmon = br.readLine(); // 포켓몬 이름 입력
@@ -31,7 +31,6 @@ public class PoketmonMaster {
 		for (int i = 0; i < M; i++) {
 			sb.append(map.get(br.readLine()) + "\n");
 		} // 내가 맞춰야할 포켓몬 번호, 이름 입력
-
 		System.out.println(sb);
 
 	}
