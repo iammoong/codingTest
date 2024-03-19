@@ -1,4 +1,4 @@
-package Day_1;
+package day_1;
 
 public class Dog {
 
